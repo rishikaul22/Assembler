@@ -146,7 +146,7 @@ class TeacherApi(Resource):
 
     def get(self, username):
         teacher = Teacher.query.filter_by(username=username).first()
-        student = StudentTeacher.query.filter_by(teacher_name=username).all()
+        student = StudentTeacher.query.filter_by(username=username).all()
         # student = StudentTeacher.query.get(1)
         print(student)
         student_data = []
